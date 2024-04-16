@@ -4,9 +4,9 @@ import java.sql.*;
 
 public class Conexion {
 
-	private final String database = "jdbc:mysql://92.222.10.128/Biblioteca";
-	private final String usuario = "alumno";
-	private final String password = "AlumnoDAW123!";
+	private final String database = "jdbc:mysql://localhost/bibliotecaPRG";
+	private final String usuario = "root";
+	private final String password = "";
 	
 	public Statement abrirConexion() {
 		
@@ -26,6 +26,26 @@ public class Conexion {
 		}
 		
 		return stm;
+	}
+	
+public Connection abrirConsulta() {
+		
+		Connection link= null;
+		
+		
+		try {
+			
+			//Class.forName("com.mysql.cj.jdbc.Driver");
+			link = DriverManager.getConnection(database, usuario, password);
+			
+		
+		} catch (Exception e) {
+			e.printStackTrace();
+			
+			
+		}
+		
+		return link;
 	}
 	
 	public void cerrarConexion(Statement stm) {
