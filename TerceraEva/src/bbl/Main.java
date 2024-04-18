@@ -6,10 +6,11 @@ import java.util.ArrayList;
 // Clase principal que contiene el método main
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws SQLException {
+		
 		// Crear una instancia de la clase Persistencia
 		Persistencia p = new Persistencia();
-		
+		/*
 		// Obtener la lista de autores y libros utilizando el método getAutores() y getLibro() respectivamente
 		ArrayList<Autor> listaAutores = p.getAutores();
 		ArrayList<Libro> listaLibros = p.getLibro();	
@@ -21,7 +22,9 @@ public class Main {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
+		
+		p.actualizarPrecioLibro("9780192833987",33.6 );
 	}
 
 }

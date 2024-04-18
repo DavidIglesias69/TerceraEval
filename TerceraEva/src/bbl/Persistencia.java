@@ -152,4 +152,22 @@ public class Persistencia {
 
 		ps.execute();
 	}
+	
+	public void actualizarPrecioLibro (String isbnLibro, double nuevoPrecio) throws SQLException {
+		
+		
+		
+		Conexion cone = new Conexion();
+		Connection link = cone.abrirConsulta();
+
+		String sql = "UPDATE Libro SET Libro.precio =? WHERE Libro.ISBN=?";
+		PreparedStatement ps = link.prepareStatement(sql);
+		ps.setDouble(1,nuevoPrecio);
+		ps.setString(2,isbnLibro);
+		//9780192833987
+		ps.execute();
+	}
+	
+	
+	
 }

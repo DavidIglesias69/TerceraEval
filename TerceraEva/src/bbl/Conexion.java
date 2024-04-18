@@ -4,9 +4,9 @@ import java.sql.*;
 
 public class Conexion {
 
-	private final String database = "jdbc:mysql://localhost/bibliotecaPRG";
-	private final String usuario = "root";
-	private final String password = "";
+	private final String database = "jdbc:mysql://92.222.10.128/Biblioteca";
+	private final String usuario = "alumno";
+	private final String password = "AlumnoDAW123!";
 	
 	public Statement abrirConexion() {
 		
