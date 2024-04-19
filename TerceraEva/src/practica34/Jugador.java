@@ -1,5 +1,7 @@
 package practica34;
 
+import java.util.Scanner;
+
 public class Jugador {
     private String usuario;
     private String contraseña;
@@ -36,3 +38,4 @@ public class Jugador {
         this.nombreCompleto = nombreCompleto;
     }
 }
+
