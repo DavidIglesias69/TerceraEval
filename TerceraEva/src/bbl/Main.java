@@ -24,7 +24,8 @@ public class Main {
 			e.printStackTrace();
 		}*/
 		
-		p.actualizarPrecioLibro("9780192833987",33.6 );
+		p.actualizarPrecioLibro("",33);
+		
 	}
 
 }

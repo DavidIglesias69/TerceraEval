@@ -160,7 +160,7 @@ public class Persistencia {
 		Conexion cone = new Conexion();
 		Connection link = cone.abrirConsulta();
 
-		String sql = "UPDATE Libro SET Libro.precio =? WHERE Libro.ISBN=?";
+		String sql = "UPDATE Libro SET Libro.precio =? WHERE Libro.precio=?";
 		PreparedStatement ps = link.prepareStatement(sql);
 		ps.setDouble(1,nuevoPrecio);
 		ps.setString(2,isbnLibro);
@@ -168,6 +168,19 @@ public class Persistencia {
 		ps.execute();
 	}
 	
+public int actualizarPrecio (double precioAntiguo, double precioNuevo) throws SQLException {
+		
+		
+		
+		Conexion cone = new Conexion();
+		Connection link = cone.abrirConsulta();
+
+		String sql = "UPDATE Libro SET precio =? WHERE precio=?";
+		PreparedStatement ps = link.prepareStatement(sql);
+		ps.setDouble(2,precioAntiguo);
+		ps.setDouble(1,precioNuevo);
+		return ps.executeUpdate();
+	}
 	
 	
 }
