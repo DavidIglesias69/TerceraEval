@@ -79,5 +79,5 @@ public class MetodosDB {
         }
     }
 
-    // Otros métodos para manejar las operaciones en la base de datos
+    
 }
